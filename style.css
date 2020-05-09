@@ -1,20 +1,115 @@
 body {font-family: 'Open Sans', sans-serif;
-  border: 20px solid silver;
-  background-color: #e6f3f7;}
+ /*border: 20px solid silver; */
+  background-color: #10284a;
+  margin: 0px 0px 0px 0px;
+}
 
-@media only screen and (max-width: 600px) 
+ 
 
 #welcome-section{
+  margin-top: -130px;
   width: 100vw;
-  height: 100vh;
-  
-  border-color: silver;
+  height: 70vh;
  }
 
 h1{
+  
   text-align: center;
   line-height: 100vh;
   display: block;
+  color: white;
+}
+
+    #ground_curve {
+      position:relative;
+      top: 50px;
+      width:100vw;
+      height: 100px;
+      background: green;
+      border-radius: 180px / 100px;
+      overflow: hidden;
+      z-index: 1; 
+    }
+
+#ground_box{
+  position:relative;
+  background-color:green;
+  height: 200px;
+  width: 100vw;
+  z-index: 0;
+  overflow: hidden;
 }
 
 
+  
+@keyframes example {
+  0%   {top: 100vh;}
+  100% {top: 0vh;}
+}
+  
+    #moon {
+      position: relative;
+      left:60vw;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      box-shadow: 15px 15px 0 0 white;
+      margin-bottom = 0px;
+      animation-name: example;
+      animation-duration: 3s;
+      z-index = -1;
+    }
+@keyframes star {
+  0%   {opacity: 0;transform: rotate(0deg);}
+  25%  {opacity: 1;}
+  50% {opacity: 0;transform: rotate(90deg);}
+}  
+
+
+.star{
+  position: absolute;
+  margin: 0px 0px 0px 0px;
+  color: gold;
+  font-size: 50px; 
+}
+
+#star1{
+  left: 12vw;
+  animation-name: star;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;}
+
+#star2{
+  opacity: 0;
+  left: 30vw;
+  bottom: 10vh;
+  animation-delay:.8s ;
+  animation-name: star;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+#star3{
+  opacity: 0;
+  left: 60vw;
+  bottom: 40vh;
+  animation-delay:1.3s ;
+  animation-name: star;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+ animation-direction: alternate-reverse;
+}
+
+#star4{
+  opacity: 0;
+  left: 40vw;
+  bottom: 60vh;
+  animation-delay:1;
+  animation-name: star;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  
+}
